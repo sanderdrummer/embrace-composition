@@ -6,7 +6,7 @@ export const Card = ({
   actionLabel,
   handleAction,
   image,
-  imagePosition,
+  imagePosition = "center",
 }) => {
   return (
     <div>
@@ -22,6 +22,7 @@ export const Card = ({
         ))}
       {image && imagePosition === "center" && <img src={image} />}
       <div>{children}</div>
+      {image && imagePosition === "bottom" && <img src={image} />}
     </div>
   );
 };

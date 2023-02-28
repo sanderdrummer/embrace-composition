@@ -31,6 +31,7 @@ export const MainApp = () => {
           <div style={{ color: "white" }} onClick={() => setOpen(true)}>
             {"search-icon"}
           </div>
+          {open && "some content"}
         </div>
       </Navbar>
       ...
@@ -67,7 +68,7 @@ export const NavbarItem = ({ children, href }) => {
   );
 };
 
-export const Navbar: React.FC = ({ children }) => {
+export const Navbar = ({ children }) => {
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       {children}
